@@ -5,7 +5,9 @@ import { AiOutlineClose } from "react-icons/ai"
 import {HiShoppingCart} from "react-icons/hi"
 import {HiBars3} from "react-icons/hi2"
 import { Work_Sans } from "next/font/google"
-import { useState } from "react"
+import { useState, } from "react"
+import { Router, useRouter } from "next/router"
+
 
 
 const work_sans=Work_Sans({
@@ -14,10 +16,11 @@ const work_sans=Work_Sans({
     weight: ["100","200","300","400","500","600","700","800","900"],
 })
 const Header = () => {
+    const router = Router
     const [navbar, setNavbar]=useState(false)
   return (
     <>
-        <header className="static md:absolute top-[60px] left-[60px] right-[60px]">
+        <header className="">
                 <button className="absolute top-[50px] right-2  lg:hidden" onClick={() => setNavbar(!navbar)}>
                     {navbar ? (
                         <AiOutlineClose/>
@@ -29,24 +32,24 @@ const Header = () => {
                         </div>
                         <div>
                             <ul className="flex gap-[30px] justify-center items-center text-[#000]">
-                                <li>
-                                    <Link href={"/Carousel"}>Carousel</Link>
+                                <li className="hover:text-[#fab005] font-semibold">
+                                    <Link href={"#Carousel"} to={"#Carousel"}>Carousel</Link>
                                 </li>
-                                <li>
+                                <li className="hover:text-[#fab005] font-semibold">
                                     <Link href={"/Card"}>Card</Link>
                                 </li>
-                                <li>
+                                <li className="hover:text-[#fab005] font-semibold">
                                     <Link href={"/FAQs"}>FAQs</Link>
                                 </li>
-                                <li>
-                                    <button className="px-[18px] bg-[#fab005] rounded-md h-9 text-[#fff] font-semibold">Check out Mantine</button>
+                                <li className="hover:text-[#fab005] font-semibold">
+                                    <button className="px-[18px] bg-[#fab005] rounded-md h-9 text-[#fff] font-semibold hover:anim">Check out Mantine</button>
                                 </li>
                             </ul>
                         </div>
                 </div>
 
-            <nav className={` w-full  md:w-auto" id="navbar-default md:hidden ${navbar ? 'p-12 md:p-0' : 'hidden'} `}>
-               <div className="absolute lg:static z-[9999]  top-0 md:w-full md:h-auto h-screen justify-evenly bg-white -left-16px w-[320px] right-0 p-[24px]" >
+            <nav className={` w-full  md:w-auto" id="navbar-default md:hidden ${navbar ? 'p-12 md:p-0' : 'hidden'}  `}>
+               <div className="absolute lg:static z-[9999]  top-0 md:w-full md:h-auto h-screen justify-evenly bg-white -left-16px w-[320px] right-0 p-[24px] origin-top-left rotate-12 animate-[spin_1s_1_forwords]" >
                 <div className="mx-2 md:hidden flex justify-between ">
                     <h2 className="mb-4 text-[#000] text-base">Menu</h2>
                     <button className=""  onClick={() => setNavbar(!navbar)}>{!navbar ? (
@@ -56,11 +59,12 @@ const Header = () => {
                 <div className=" flex flex-col gap-[30px]">
                     <ul className=" flex flex-col  md:p-0 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white text-md md:text-lg  h-fit justify-evenly text-[#000] gap-[10px] text-[26px] font-bold">
                         <li>
-                            <Link href={"/Carousel"}>Carousel</Link>
+                            <Link href={"/Carousel"} >Carousel</Link>
+
                         </li>
                         <li>
                             <Link href={"/Card"}>Card</Link>
-                        </li>
+                        </li>   
                         <li>
                             <Link href={"/FAQs"}>FAQs</Link>
                         </li>

@@ -71,19 +71,22 @@ const Slider = () => {
   };
 
   return (
-    <section className="carousel-container  text-[#000] px-4 md:px-16 py-[60px]">
+    <section className="carousel-container  text-[#000] px-4 md:px-16 py-[60px] #Carousel">
+      <div className="">
+
       <div className=" text-center">
           <h2 className='heading md:text-[34px] text-[26px] font-bold mt-[31px] mb-[13px]'>Explain something in this carousel</h2>
           <h6 className='subheading mb-[13px] text-sm  md:text-base' >You can insert images or some texts if you need.</h6>
       </div>
       <Carousel responsive={Responsive} showDots={true} dotListClass=".react-multi-carousel-dot" infinite className='h-[300px] max-w-[960px] m-auto '>
         {Category.map((item) => (
-          <div className="category-card h-[320px] flex flex-col items-center justify-center rounded-2xl  gap-[15px] bg-[#fcc419] md:mr-4" key={item.Number}>
+          <div className="category-card h-[320px] flex flex-col items-center justify-center rounded-2xl  gap-[15px] bg-[#fcc419] md:mr-4 scale-95 hover:scale-105" key={item.Number}>
             <h5 className='text-xl  md:text-[26px] font-bold'>{item.Number}</h5>
             <p className='text-sm md:text-base'>{item.Text}</p>
           </div>
         ))}
       </Carousel>
+      </div>
     </section>
   );
 };

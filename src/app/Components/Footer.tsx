@@ -4,7 +4,7 @@ const Footer = () => {
     <>
      <footer className="bg-[#fab005] md:px-[64px] py-[60px]">
         <div className="contianer xl:px-[177px]">
-            <div className="flex justify-between lg:flex-row flex-col xs:text-center lg:text-left">
+            <div className="flex justify-between lg:flex-row flex-col xs:text-center lg:text-left fitw">
                 <div className=" flex flex-col gap-[16px] p-2">
                     <h3 className="font-bold text-xl">Simple Mantine template</h3>
                     <div className="flex flex-col gap-[10px]">

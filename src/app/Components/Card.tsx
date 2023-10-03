@@ -27,21 +27,24 @@ const Card = () => {
     <div className=" text-center text-[#000]">
           <h2 className='heading md:text-[34px] text-[26px] font-bold mt-[31px] mb-[13px]'>These cards are really nice</h2>
       </div>
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-[30px] text-[#000] fitw m-auto ">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-[30px] text-[#000] fitw m-auto [perspective:1000px]">
             {myCard.map((items,index)=>(
 
-            <div className=" md:first-letter:max-w-sm rounded overflow-hidden shadow-lg p-[28px] -m-[10px] ">
+            <div className=" md:first-letter:max-w-sm rounded overflow-hidden shadow-lg p-[28px] -m-[10px] transition-all duration-500 [transform-style:preserve-3d] hover:[transform:rotateY(180deg)]">
                 <img className="w-full h-auto object-cover mb-[10px]" src={items.Image} alt={items.Heading}/>
-                <div className=" mt-3 mb-[5px] flex justify-between gap-[16px] flex-wrap items-center ">
+                <div className="[transform-style:preserve-3d] hover:[transform:rotateY(180deg)]">
+
+                <div className=" mt-3 mb-[5px] flex justify-between gap-[16px] flex-wrap items-center  ">
                     <h4 className=" text-base font-medium">
                         {items.Heading}
                     </h4>
-                    <div className="font-bold text-[11px]  px-[10.66px] bg-[#fff9db] text-[#fab005] uppercase   " >{items.Badge}</div>
+                    <div className="font-bold text-[11px]  px-[10.66px] bg-[#fff9db] text-[#fab005] uppercase " >{items.Badge}</div>
                 </div>
                 <div className=" text-sm">
                     <p>{items.Subheading}</p>
                 </div>
                 <button className='text-sm font-semibold mt-[14px] px-[18px] bg-[#fff9db] text-[#fab005] w-full h-9 rounded'>Find out</button>
+                </div>
             </div> 
             ))}
         </div>

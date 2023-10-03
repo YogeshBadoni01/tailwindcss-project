@@ -11,7 +11,7 @@ import Acoordian from './Components/Acoordian'
 export default function Home() {
   return (
   <>
-    <div className="bg-[#fff] ">
+    <div className="bg-[#fff] transition ease-in-out delay-150  transition-transform:background-red-900">
       <Header/>
       <Hero/>
       <Slider/>

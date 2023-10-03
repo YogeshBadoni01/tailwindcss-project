@@ -3,8 +3,8 @@ const SectionOne = () => {
   return (
     <>
             <section className="carousel-container  text-[#000] px-4 md:px-16 py-[60px] ">
-                <div className="m-auto flex fitw flex-col lg:flex-row">
-                    <div className="lg:basis-1/2 basis-auto xl:basis-auto  text-left p-2">
+                <div className="m-auto flex fitw flex-col lg:flex-row ">
+                    <div className="lg:basis-1/2 basis-auto xl:basis-auto  text-left p-2 ">
                         <div className="mb-5">
 
                             <h2 className='heading text-[26px] md:text-[34px]  font-bold mt-[31px] mb-[13px]'>You can put whatever you want here</h2>
@@ -12,7 +12,7 @@ const SectionOne = () => {
                     </div>
                         <button className="bg-[#fab005] text-[#fff] rounded-[4px] font-semibold  px-[18px] gap-2 h-[36px] ">Check it out</button>
                     </div>
-                    <div className=" m-auto lg:basis-1/2 xl:basis-auto p-2">
+                    <div className=" m-auto lg:basis-1/2 xl:basis-auto p-2 md:hover:scale-110 hover:scale-75 ">
                         <img src={"/image/image1.png"} alt="hollywood" />
                     </div>
                 </div>

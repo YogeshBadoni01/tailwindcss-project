@@ -41,10 +41,10 @@ const Acoordian = () => {
                         {items.icon}
                     </div>
                    {items.qusestion}</summary>
-                    <div className="absolute right-2 top-4  my-auto">
+                    <div className="absolute right-2 top-4  my-auto animate-bounce">
                     {flag ? <IoIosArrowUp/>:<IoIosArrowDown/>  }
                  </div>
-                <div className="bg-white px-5 py-3  border-gray-300 text-sm font-light">
+                <div className="bg-white px-5 py-3  border-gray-300 text-sm font-light ease-in-out delay-1000 ">
                     <p>{items.answer}</p>
                 </div>
             </details>
